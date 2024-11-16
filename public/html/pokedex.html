@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png"> 
+    <link rel="stylesheet" type="text/css" href="../css/style-pokedex.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-global.css">
+
+    <!-- defer pq foi importado antes do body -->
+    <script defer src="../js/apiConnection.js"></script>
+
+    <!-- Importa o music.js para controle da música -->
+    <script src="../js/music.js" defer></script>
+
+    <title>4Poke - Pokédex</title>
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar">
+    <ul>
+      <li><img src="../images/pokebola.png" alt="Logo" class="logo"/></li>
+
+      <li><a href="http://localhost:3000/html/home.html">
+          <img src="../images/home.png" alt="Ícone Home" class="home-icon"/>Home</a></li>   
+
+      <li><a href="http://localhost:3000/html/pokedex.html">
+          <img src="../images/pokedex-icon.png" alt="Ícone Pokédex" class="pokedex-icon"/>Pokédex</a></li>
+
+      <li><a href="http://localhost:3000/html/cadastro.html">
+        <img src="../images/login-icon.png" alt="Ícone Cadastro" class="cadastro-icon"/>Cadastro</a></li>
+
+
+      <li><a href="http://localhost:3000/html/login.html">
+        <img src="../images/login-man.png" alt="Ícone Login" class="login-man"/>Login</a></li>
+
+      <li><div class="botao_tema">
+        <div class="trilho" id="trilho">
+            <img id="themeIcon" src="../images/pikachu.png" alt="Ícone do tema" class="theme-icon">
+        </div>
+      </div>
+      <li><img src="../images/speaker1.png" alt="Controlador de Música" id="musicControlIcon" class="music-control-icon" /></li>
+      </li>
+    </ul>
+  </nav>
+
+    <main>
+        <!-- imagem do pokemon -->
+        <img src="#" alt="Pokemon" class="poke_img">
+
+        <!-- exibição de nome e id do pokemon-->
+        <h1 class="poke_data">
+            <span class="poke_num"></span> -
+            <span class="poke_name"></span>
+        </h1>
+
+        <!-- área de pesquisa do pokemon -->
+        <form class="form">
+            <input 
+            type="search" class="input_search"
+            placeholder="Nome ou número"
+            required
+            >
+        </form>
+
+        <!-- Botões para avançar e voltar pokemons -->
+        <div class="buttons">
+            <button class="button btn-prev">&lt; Anterior</button>
+            <button class="button btn-next">Próximo &gt;</button>
+        </div>
+
+        <!-- imagem da pokedex -->
+        <img src="../images/pokedex.png" alt="Pokedex" class="pokedex">
+    </main>
+
+            <!-- Importa o darkMode.js para mudar o tema -->
+            <script src="../js/darkMode.js"></script>
+
+    <footer class="rodape">
+        <div class="texto_rodape">
+            <p>©2024 4Poke - Todos os direitos reservados.</p>
+            <p>Desenvolvido por: Victor Girardi</p>
+        </div>
+    </footer>
+
+    <!-- Elemento de áudio com id para controle da música -->
+    <audio id="backgroundMusic" src="../music/pokemon.mp3" loop></audio>
+
+</body>
+</html>

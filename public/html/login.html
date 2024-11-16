@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="../css/style-login.css">
+  <link rel="stylesheet" type="text/css" href="../css/style-global.css">
+
+  <!-- Importa o music.js para controle da música -->
+  <script src="../js/music.js" defer></script>
+  <!-- Importa o localStorage.js para controle da navegação -->
+  <script src="../js/localStorage.js" defer></script>
+
+  <title>4Poke - Login</title>
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar">
+    <ul>
+      <li><img src="../images/pokebola.png" alt="Logo" class="logo"/></li>
+
+      <li><a href="http://localhost:3000/html/home.html">
+          <img src="../images/home.png" alt="Ícone Home" class="home-icon"/>Home</a></li>   
+
+      <li><a href="http://localhost:3000/html/pokedex.html">
+          <img src="../images/pokedex-icon.png" alt="Ícone Pokédex" class="pokedex-icon"/>Pokédex</a></li>
+
+      <li><a href="http://localhost:3000/html/cadastro.html">
+        <img src="../images/login-icon.png" alt="Ícone Cadastro" class="cadastro-icon"/>Cadastro</a></li>
+
+
+      <li><a href="http://localhost:3000/html/login.html">
+        <img src="../images/login-man.png" alt="Ícone Login" class="login-man"/>Login</a></li>
+
+      <li><div class="botao_tema">
+        <div class="trilho" id="trilho">
+            <img id="themeIcon" src="../images/pikachu.png" alt="Ícone do tema" class="theme-icon">
+        </div>
+      </div>
+      <li><img src="../images/speaker1.png" alt="Controlador de Música" id="musicControlIcon" class="music-control-icon" /></li>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- Caixa branca para o conteúdo do login -->
+  <div class="container"> 
+    <h1>Login</h1>
+    
+    <form class="login-form" action="/login" method="POST" onsubmit="localStorage.setItem('loggedIn', 'true')">
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" required />
+      
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required />
+
+      <p id="errorMessage" style="color: red;"></p>
+      <button type="submit" aria-label="Entrar no sistema">Entrar</button>
+    </form>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const error = params.get('error');
+      if (error) {
+        document.getElementById('errorMessage').textContent = error;
+      }
+    </script>
+
+    <p class="pbody">Não tem uma conta? <a href="../html/cadastro.html">Cadastre-se aqui.</a></p>
+  </div>
+  
+    <script src="../js/darkMode.js"></script>
+
+    <footer class="rodape">
+      <div class="texto_rodape">
+        <p>©2024 4Poke - Todos os direitos reservados.</p>
+        <p>Desenvolvido por: Victor Girardi</p>
+
+    </footer>
+
+    <!-- Elemento de áudio com id para controle da música -->
+    <audio id="backgroundMusic" src="../music/pokemon.mp3" loop></audio>
+</body>
+</html>

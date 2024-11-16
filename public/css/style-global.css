@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #212121;
+    min-height: 100vh;
+    background-image: url('../images/background-pikachus.webp'); /* Caminho para a imagem de fundo */
+    background-repeat: repeat; /* Faz a imagem se repetir */
+    background-position: center; /* Centraliza a imagem (pode ser removido, já que a imagem vai se repetir) */
+}
+
+/* Estilo da barra de navegação */
+.navbar {
+    position: fixed; /* Fixa a barra no topo */
+    top: 0; /* Alinha a barra ao topo */
+    width: 100%; /* Largura total */
+    background: linear-gradient(to right, #e29b15, #fdc94c); /* Degradê do laranja para o amarelo */
+    z-index: 1000; /* Garante que a barra fique acima de outros elementos */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove as marcas de lista */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove preenchimentos */
+    display: flex; /* Utiliza Flexbox para dispor os itens em linha */
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro (opcional) */
+}
+
+.navbar img.logo {
+    width: 50px; /* Define a largura da logo */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Adiciona margem à direita para afastar a logo dos itens da lista */
+}
+
+.navbar a {
+    display: block; /* Para que o link ocupe toda a área do li */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 14px 20px; /* Preenchimento interno, adicione mais espaço lateral se necessário */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+.navbar a:hover {
+    background-color: rgb(202, 7, 49); /* Cor ao passar o mouse */
+    color: white; /* Mantém a cor do texto ao passar o mouse */
+}
+
+.home-icon {
+    width: 20px; /* Defina a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Adiciona espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto verticalmente */
+}
+
+.pokedex-icon {
+    width: 20px; /* Defina a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Adiciona espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto verticalmente */
+}
+
+.cadastro-icon {
+    width: 18px; /* Defina a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Adiciona espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto verticalmente */
+}
+
+.login-man {
+    width: 30px; /* Defina a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Adiciona espaçamento entre a imagem e o texto */
+    vertical-align: middle; /* Alinha a imagem com o texto verticalmente */
+}
+
+
+.music-control-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 17px;
+    margin-top: 10px;
+}
+
+/* Adiciona margem ao conteúdo abaixo da barra de navegação */
+.container {
+    margin-top: 60px; /* Deixa espaço para a barra de navegação */
+}
+
+.trilho {
+    width: 50px;
+    height: 20px;
+    background-color: #f9d074; /* Cor pastel para o trilho */
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.trilho.dark {
+    justify-content: flex-end;
+    
+}
+
+
+.theme-icon {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+}
+
+body.dark {
+    background-color: #e4e4e4;
+}
+
+body.dark h1,
+body.dark label,
+body.dark .content-background,
+body.dark .pbody {
+    color: #e4e4e4;
+}
+
+.pbody, h1, label {
+    color: #000; /* Define a cor do texto como preto para todos os elementos */
+}
+
+
+@keyframes swing {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); } /* Movendo um pouco para o lado */
+    100% { transform: translateX(0); }
+}
+
+.theme-icon.swing {
+    animation: swing 0.3s ease-in-out; /* Aplica o efeito de balanço */
+}
+
+/* Fim do estilo para Darkmode */
+
+/* Estilo para o rodapé */
+.rodape {
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Adiciona alinhamento à esquerda */
+    right: 0; /* Adiciona alinhamento à direita */
+    width: 100%;
+    height: 5%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-size: 15px;
+    z-index: 1000;
+}
+
+.texto_rodape {
+    line-height: 1.1;
+}
+
+/* Fim do estilo para rodapé */
+
+/* Estilo do botão moderno (pause-btn) */
+.pause-btn {
+    display: block; /* Para que o link ocupe toda a área do li */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 14px 20px; /* Preenchimento interno igual aos outros botões */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 5px; /* Opcional: igualar a borda aos outros links */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+}
+
+.pause-btn:hover {
+    background-color: rgb(202, 7, 49); /* Cor ao passar o mouse */
+}
+

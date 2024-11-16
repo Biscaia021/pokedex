@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="../css/style-home.css">
+  <link rel="stylesheet" type="text/css" href="../css/style-global.css">
+
+  <!-- Importa o music.js para controle da música -->
+  <script src="../js/music.js" defer></script>
+  <!-- Importa o localStorage.js para controle da navegação -->
+  <script src="../js/localStorage.js" defer></script>
+  
+  <title>4Poke - O início da sua jornada!</title>
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <nav class="navbar">
+    <ul>
+      <li><img src="../images/pokebola.png" alt="Logo" class="logo"/></li>
+
+      <li><a href="http://localhost:3000/html/home.html">
+          <img src="../images/home.png" alt="Ícone Home" class="home-icon"/>Home</a></li>   
+
+      <li><a href="http://localhost:3000/html/pokedex.html">
+          <img src="../images/pokedex-icon.png" alt="Ícone Pokédex" class="pokedex-icon"/>Pokédex</a></li>
+
+      <li><a href="http://localhost:3000/html/cadastro.html">
+        <img src="../images/login-icon.png" alt="Ícone Cadastro" class="cadastro-icon"/>Cadastro</a></li>
+
+
+      <li><a href="http://localhost:3000/html/login.html">
+        <img src="../images/login-man.png" alt="Ícone Login" class="login-man"/>Login</a></li>
+
+      <li><div class="botao_tema">
+        <div class="trilho" id="trilho">
+            <img id="themeIcon" src="../images/pikachu.png" alt="Ícone do tema" class="theme-icon">
+        </div>
+      </div>
+      <li><img src="../images/speaker1.png" alt="Controlador de Música" id="musicControlIcon" class="music-control-icon" /></li>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Bem-vindo ao início da sua jornada Pokémon!</h1>
+    <div class="content-background">
+        <p>Trabalho feito para disciplina de Desenvolvimento Web</p>
+    </div>
+</div>
+
+
+
+  <script src="../js/darkMode.js"></script>
+
+  <footer class="rodape">
+    <div class="texto_rodape">
+      <p>©2024 4Poke - Todos os direitos reservados.</p>
+      <p>Desenvolvido por: Victor Girardi</p>
+    </div>
+  </footer>
+
+  <!-- Elemento de áudio com id para controle da música -->
+  <audio id="backgroundMusic" src="../music/pokemon.mp3" loop></audio>
+</body>
+</html>
